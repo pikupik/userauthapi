@@ -80,7 +80,7 @@ This is a **RESTful API** for user authentication using **JWT (JSON Web Token)**
 ## Endpoints
 
 ### 1. Register a New User
-**POST** `/api/auth/register`
+**POST** `/api/apivckit/register`
 
 #### Request
 - **Content-Type**: `application/json`
@@ -110,7 +110,7 @@ This is a **RESTful API** for user authentication using **JWT (JSON Web Token)**
 ```
 
 ### 2. User Login
-**POST** `/api/auth/login`
+**POST** `/api/apivckit/login`
 
 #### Request
 - **Content-Type**: `application/json`
@@ -141,9 +141,34 @@ This is a **RESTful API** for user authentication using **JWT (JSON Web Token)**
 ## JWT Token
 After logging in, the server responds with a JWT. This token should be included in the `Authorization` header for all subsequent requests to protected routes.
 
+
+### 3. Login to ProtectedRoute
+**GET** `/api/apivckit/protected-route`
+
 **Header format**:
 ```
 Authorization: Bearer your_jwt_token
+```
+
+#### Response
+**Success**:
+```json
+{
+  "message": "This is a protected route",
+  "user": {
+    "id": x,
+    "email": "youremail@email.com",
+    "iat": xxxxxxxx,
+    "exp": xxxxxxxx
+  }
+}
+```
+
+**Failure**:
+```json
+{
+  "error": "Invalid Token"
+}
 ```
 
 ## Middleware
@@ -166,7 +191,7 @@ We welcome contributions! If you'd like to contribute to this project, please fo
 5. Create a pull request.
 
 ## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License.
 
 ## Contact
 For any questions or issues, feel free to reach out via [GitHub Issues](https://github.com/pikupik/userauthapi/issues).
