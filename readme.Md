@@ -20,12 +20,12 @@ This is a RESTful API for user authentication using JWT (JSON Web Token). The AP
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
+   git clone https://github.com/pikupik/userauthapi.git
    ```
    
 2. Navigate to the project directory:
    ```bash
-   cd your-repo-name
+   cd userauthapi
    ```
 
 3. Install dependencies:
@@ -33,10 +33,25 @@ This is a RESTful API for user authentication using JWT (JSON Web Token). The AP
    npm install
    ```
 
+## Note: if you using mysql use mysql2
+4. Using mysql2 dependencies (opsional)
+  ```bash
+  npm i mysql2
+  ```
+
 4. Set up environment variables by creating a `.env` file in the root directory:
    ```
    PORT=3000
    JWT_SECRET=your_jwt_secret_key
+   
+   For Mysql Use localhost
+   
+   DB_HOST=Your database host || localhost
+   DB_PORT=Your database port
+   DB_PASS=Your Database Password || ""
+   DB_NAME=Your Database name
+   
+   Or You can use DB url
    DB_URI=your_database_uri
    ```
 
