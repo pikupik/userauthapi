@@ -8,6 +8,7 @@ This is a **RESTful API** for user authentication using **JWT (JSON Web Token)**
 - **JWT-based Authentication**: Ensures that API calls are authenticated using JSON Web Tokens.
 - **Secure Password Hashing**: Utilizes Bcrypt to hash passwords before storing them in the database.
 - **User Input Validation**: Implements JOI for validating user registration inputs.
+- **HTML Input Sanitization**: Uses middleware to sanitize input, preventing XSS attacks.
 
 ## Tech Stack
 - **Node.js**: JavaScript runtime for building server-side applications.
@@ -15,6 +16,7 @@ This is a **RESTful API** for user authentication using **JWT (JSON Web Token)**
 - **JSON Web Token (JWT)**: Standard for securely transmitting information between parties.
 - **Bcrypt**: Library for hashing passwords.
 - **JOI**: Validation library for data schemas.
+- **HTML Sanitization Middleware**: Prevents XSS attacks by sanitizing user input.
 
 ## Installation
 
@@ -138,11 +140,7 @@ This is a **RESTful API** for user authentication using **JWT (JSON Web Token)**
 }
 ```
 
-## JWT Token
-After logging in, the server responds with a JWT. This token should be included in the `Authorization` header for all subsequent requests to protected routes.
-
-
-### 3. Login to ProtectedRoute
+### 3. Access a Protected Route
 **GET** `/api/apivckit/protected-route`
 
 **Header format**:
@@ -172,7 +170,9 @@ Authorization: Bearer your_jwt_token
 ```
 
 ## Middleware
-The API uses middleware to protect certain routes. Any routes requiring authentication will validate the JWT token provided in the request headers.
+The API uses middleware to protect certain routes and sanitize inputs. 
+- **Authentication Middleware**: Validates the JWT token for protected routes.
+- **HTML Sanitization Middleware**: Cleans user input to prevent XSS attacks, ensuring that any potentially harmful scripts or HTML tags are removed before processing.
 
 ## Error Handling
 The API responds with appropriate HTTP status codes and error messages for various error scenarios, such as invalid credentials or token expiration.
@@ -180,6 +180,7 @@ The API responds with appropriate HTTP status codes and error messages for vario
 ## Security
 - Passwords are hashed using Bcrypt before being stored in the database.
 - JWT tokens are signed with a secret key, which should be kept secure.
+- HTML sanitization helps to prevent XSS vulnerabilities by sanitizing user input.
 
 ## Contribution
 We welcome contributions! If you'd like to contribute to this project, please follow these steps:
