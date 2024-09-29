@@ -32,12 +32,11 @@ This is a RESTful API for user authentication using JWT (JSON Web Token). The AP
    ```bash
    npm install
    ```
+4. Using mysql2 dependencies(optional):
+   ```bash
+   npm i mysql2
+   ```
 
-## Note: if you using mysql use mysql2
-4. Using mysql2 dependencies (opsional)
-  ```bash
-  npm i mysql2
-  ```
 
 4. Set up environment variables by creating a `.env` file in the root directory:
    ```
