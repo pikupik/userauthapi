@@ -24,6 +24,9 @@ app.use(sanitizeInput);
 // Routing Apps
 app.use('/apivckit', authRoutes); // Untuk authentication
 app.use('/apivckit', protectedRoutes); // login yang dilindungi
+app.get('/', (req, res) => {
+  res.json({'API'})
+})
 
 // Middleware untuk error handling
 app.use(errorHandler);
