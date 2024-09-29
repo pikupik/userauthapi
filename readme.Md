@@ -2,6 +2,9 @@
 
 This is a **RESTful API** for user authentication using **JWT (JSON Web Token)**. The API provides routes for user registration and login, ensuring a simple and secure way to manage user authentication, which can be consumed by any external application.
 
+## Use Online this API for Free
+https://userauthapifree.vercel.app/
+
 ## Features
 - **User Registration**: Allows new users to create an account.
 - **User Login**: Authenticates users and provides a JWT for secure access.
