@@ -7,12 +7,14 @@ This is a RESTful API for user authentication using JWT (JSON Web Token). The AP
 - User Login
 - JWT-based authentication
 - Secure password hashing
+- validation register user
 
 ## Tech Stack
 - Node.js
 - Express.js
 - JSON Web Token (JWT)
 - Bcrypt for password hashing
+- JOI for validation register users
 
 ## Installation
 
