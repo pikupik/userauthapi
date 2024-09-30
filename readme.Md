@@ -82,6 +82,10 @@ https://userauthapifree.vercel.app/
    npm start
    ```
 
+## How to Use?
+1. Use the veecel link if youre online use or
+2. Install depenencies and open POSTMAN. Follow this steps.
+
 ## Endpoints
 
 ### 1. Register a New User
